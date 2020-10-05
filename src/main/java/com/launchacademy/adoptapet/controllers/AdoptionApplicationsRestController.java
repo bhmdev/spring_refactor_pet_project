@@ -1,4 +1,4 @@
 package com.launchacademy.adoptapet.controllers;
 
-public class AdoptionApplicationsController {
+public class AdoptionApplicationsRestController {
 }

@@ -22,7 +22,9 @@ const PetTypeIndexContainer = props => {
   }
 
   useEffect(() => {
-    let fetchString = `/api/v1/${path[0]}${path.length>1 ? `/${path[1]}` : ``}`;
+    let category = path[0]
+    let id = path.length>1 ? `/${path[1]}` : ``
+    let fetchString = `/api/v1/${category}${id}`;
     fetch(fetchString)
       .then(response => {
         if (response.ok) {

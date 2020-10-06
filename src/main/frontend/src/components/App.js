@@ -4,7 +4,7 @@ import NavBar from "./NavBar"
 
 const App = props => {
   return (
-    <BrowserRouter>
+  	<BrowserRouter>
       <Route path="/" component={NavBar} />
     </BrowserRouter>
   )

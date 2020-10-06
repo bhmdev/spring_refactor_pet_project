@@ -93,9 +93,9 @@ app.get("/api/v1/breed/:groupingId", (req, res) => {
   getPetsByType(res, 'breed', req.params.groupingId)
 })
 
-app.get("/api/v1/pets", (req, res) => {
-  getPetsByAdoptionStatus(res)
-})
+//app.get("/api/v1/pets", (req, res) => {
+//  getPetsByAdoptionStatus(res)
+//})
 
 app.get("/api/v1/past-pets", (req, res) => {
   getPetsByAdoptionStatus(res, 'TRUE')

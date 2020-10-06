@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @Controller
 @RequestMapping
@@ -32,7 +31,7 @@ public class PetTypesController {
 
     @GetMapping("/")
     public String listCharacters(Model model){
-        List<PetType> petTypes = petTypesRepository.findAll();
+        Iterable<PetType> petTypes = petTypesRepository.findAll();
         model.addAttribute("petTypes", petTypes);
         return "/";
     }
@@ -52,7 +51,7 @@ public class PetTypesController {
     }
 
     private void populateLookupData(Model model){
-        List<PetType> petTypeList = petTypesRepository.findAll();
+        Iterable<PetType> petTypeList = petTypesRepository.findAll();
         model.addAttribute("filmsList", petTypeList);
     }
 }

@@ -21,7 +21,6 @@ public class PetType {
     @Column(name="id", nullable = false, unique = true)
     private Integer id;
 
-
     @Column(name="type", nullable=false)
     private String type;
 

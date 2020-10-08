@@ -22,7 +22,6 @@ public class AdoptablePetsSeeder {
     }
 
     public void seed() {
-//        List<AdoptablePet> adoptablePetList = new ArrayList();
         List<PetType> petTypeList = (List<PetType>) petTypesRepository.findAll();
 
         AdoptablePet garfield = new AdoptablePet();
@@ -33,7 +32,6 @@ public class AdoptablePetsSeeder {
         garfield.setAdoption_story("this is your story");
         garfield.setAdoption_status("null");
         garfield.setPetType(petTypeList.get(0));
-//        adoptablePetList.add(garfield);
         adoptablePetsRepository.save(garfield);
 
         AdoptablePet pinky = new AdoptablePet();
@@ -44,7 +42,6 @@ public class AdoptablePetsSeeder {
         pinky.setAdoption_story("best lab rat ever");
         pinky.setAdoption_status("null");
         pinky.setPetType(petTypeList.get(1));
-//        adoptablePetList.add(pinky);
         adoptablePetsRepository.save(pinky);
 
 
@@ -55,8 +52,7 @@ public class AdoptablePetsSeeder {
         simba.setVaccination_status(true);
         simba.setAdoption_story("everything the light touches");
         simba.setAdoption_status("null");
-//        adoptablePetList.add(simba);
+        pinky.setPetType(petTypeList.get(2));
         adoptablePetsRepository.save(simba);
-//        return adoptablePetList;
     }
 }

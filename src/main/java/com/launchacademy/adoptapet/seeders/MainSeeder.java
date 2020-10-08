@@ -19,6 +19,5 @@ public class MainSeeder implements CommandLineRunner {
     public void run(String... args) throws Exception {
         petTypesSeeder.seed();
         adoptablePetsSeeder.seed();
-//        List<AdoptablePet> seed = adoptablePetsSeeder.getSeedData();
     }
 }

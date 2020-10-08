@@ -18,6 +18,7 @@ const PetsContainer = (props) => {
      return(
       <div className="pet-type-item" key={index}>
         <div className="card-divider">
+        <img src={petType.img_url} />
           <Link to={`/pets/${petType.type}`} >{petType.type[0].toUpperCase() + petType.type.slice(1)}</Link>
         </div>
         <p>Description: {petType.description}</p>

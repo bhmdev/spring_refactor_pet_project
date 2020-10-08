@@ -19,7 +19,7 @@ const NavBar = (props) => {
   const petLinks = petTypes.map((petType, index) => {
     return(
         <div key={index} className="nav-item">
-          <Link to={`/pets/${petType.type}`}>{petType.type[0].toUpperCase() + petType.type.slice(1)}</Link>
+          <Link to={`/pets/${petType.type}`}>{petType.type}</Link>
         </div>
     )
   })

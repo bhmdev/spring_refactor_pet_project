@@ -6,7 +6,7 @@ const App = props => {
   return (
   	<BrowserRouter>
       <Route path="/pets" component={NavBar} />
-      <Redirect exact from="/" to="/pets" /> 
+      <Redirect exact from="/" to="/pets" />
     </BrowserRouter>
   )
 }

@@ -7,7 +7,7 @@ const PetShow = (props) => {
   const [pet, setPet] = useState([])
   const [applicationStatus, setApplicationStatus] = useState("")
   const [pageFound, setPageFound] = useState(true)
-  // let vaccinated = pet.vaccination_status  === true? "Yes" : "No"
+  let vaccinated = pet.vaccination_status  === true? "Yes" : "No"
   
   useEffect(() => {
    fetch(`/api/v1${props.location.pathname}`)

@@ -1,4 +1,7 @@
 package com.launchacademy.adoptapet.repositories;
 
-public interface SurrenderApplicationsRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface SurrenderApplicationsRepository extends CrudRepository<SurrenderApplicationsRepository, Integer> {
+    public Iterable<SurrenderApplicationsRepository> findAll();
 }

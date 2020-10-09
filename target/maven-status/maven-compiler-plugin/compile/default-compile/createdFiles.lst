@@ -5,13 +5,11 @@ com/launchacademy/adoptapet/repositories/AdoptablePetsRepository.class
 com/launchacademy/adoptapet/models/PetType.class
 com/launchacademy/adoptapet/controllers/api/v1/SurrenderApplicationsRestController.class
 com/launchacademy/adoptapet/repositories/exceeds/AdoptionApplicationsRepository.class
-com/launchacademy/adoptapet/models/SurrenderApplication.class
 com/launchacademy/adoptapet/Spring.class
 com/launchacademy/adoptapet/models/AdoptablePet.class
 com/launchacademy/adoptapet/seeders/PetTypesSeeder.class
 com/launchacademy/adoptapet/controllers/api/v1/PetTypesRestController.class
 com/launchacademy/adoptapet/controllers/IndexController.class
-com/launchacademy/adoptapet/repositories/SurrenderApplicationsRepository.class
 com/launchacademy/adoptapet/seeders/MainSeeder.class
 com/launchacademy/adoptapet/controllers/api/v1/exceeds/AdoptionApplicationsRestController.class
 com/launchacademy/adoptapet/controllers/api/v1/AdoptablePetsRestController.class

@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react'
 import PetAdoptionsForm from './PetAdoptionsForm'
 
 const PetShow = (props) => {
-  console.log(props)
   const [displayForm, setDisplayForm] = useState(false)
-  const [pet, setPet] = useState([])
+  const [pet, setPet] = useState({})
   const [applicationStatus, setApplicationStatus] = useState("")
   const [pageFound, setPageFound] = useState(true)
-  let vaccinated = pet.vaccination_status  === true? "Yes" : "No"
+  // let vaccinated = pet.vaccination_status  === true? "Yes" : "No"
+
+
+//  let vaccinated = "No";
+//  if(pet.vaccination_status) { vaccinated = "Yes" }
   
   useEffect(() => {
    fetch(`/api/v1${props.location.pathname}`)
@@ -18,9 +21,7 @@ const PetShow = (props) => {
       setPageFound(false)
     }
   })
-    .then(result => {
-      console.log(result)
-      result.json()})
+    .then(result =>  result.json())
     .then(pet => {
       setPet(pet)
     })
@@ -41,15 +42,28 @@ const PetShow = (props) => {
       /> : <button onClick={handleAdoptClick}>Adopt Me!</button>
   }
 
-  let petShowPage = (<div>
-    <h1>Adopt Me!!</h1>
-    <h3>Name: {pet.name}</h3>
-    <p>Age: {pet.age}</p>
-    <p>Vaccinated: {vaccinated}</p>
-    <p>{pet.adoption_story}</p>
-    <img src = {pet.img_url}></img>
-    {adoptForm}
-  </div>)
+  let vaccinated;
+  let petShowPage;
+  if(pet) {
+    petShowPage = (<div>
+                    <h1>Adopt Me!!</h1>
+                    <h3>Name: {pet.name}</h3>
+                    <p>Age: {pet.age}</p>
+                    <p>Vaccinated: {vaccinated}</p>
+                    <p>{pet.adoption_story}</p>
+                    <img src = {pet.img_url}></img>
+                    {adoptForm}
+                  </div>)
+
+    if(pet.vaccination_status===true) {
+      vaccinated = "Yes"
+    } else {
+      vaccinated = "No"
+    }
+  }
+
+
+
   
   let bad;
   if(!pageFound) {

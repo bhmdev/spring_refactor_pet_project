@@ -3,7 +3,7 @@ package com.launchacademy.adoptapet.models;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 
 import javax.persistence.*;
 
@@ -14,10 +14,10 @@ import javax.persistence.*;
 @Setter
 public class SurrenderApplication {
     @Id
-    @SequenceGenerator(name="pet_surrender_application_generator", sequenceName=
+    @SequenceGenerator(name="pet_surrender_applications_generator", sequenceName=
             "pet_surrender_applications_id_seq", allocationSize=1)
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator=
-            "pet_surrender_application_generator")
+            "pet_surrender_applications_generator")
     @Column(name="id", nullable=false, unique=true)
     private Integer id;
 

@@ -34,15 +34,15 @@ public class AdoptablePetsSeeder {
         garfield.setPetType(petTypeList.get(0));
         adoptablePetsRepository.save(garfield);
 
-        AdoptablePet pinky = new AdoptablePet();
-        pinky.setName("pinky");
-        pinky.setImg_url("https://vignette.wikia.nocookie.net/looneytunes/images/c/c3/Pinky.PNG/revision/latest?cb=20170525045435");
-        pinky.setAge(16);
-        pinky.setVaccination_status(true);
-        pinky.setAdoption_story("best lab rat ever");
-        pinky.setAdoption_status("null");
-        pinky.setPetType(petTypeList.get(1));
-        adoptablePetsRepository.save(pinky);
+        AdoptablePet clifford = new AdoptablePet();
+        clifford.setName("clifford");
+        clifford.setImg_url("https://imgix.bustle.com/uploads/image/2019/11/22/94729f63-9646-4982-a5c1-234dea0f64f6-clf_new_ee_c_leap.jpg");
+        clifford.setAge(16);
+        clifford.setVaccination_status(true);
+        clifford.setAdoption_story("the big red dog");
+        clifford.setAdoption_status("null");
+        clifford.setPetType(petTypeList.get(1));
+        adoptablePetsRepository.save(clifford);
 
 
         AdoptablePet simba = new AdoptablePet();
@@ -52,7 +52,7 @@ public class AdoptablePetsSeeder {
         simba.setVaccination_status(true);
         simba.setAdoption_story("everything the light touches");
         simba.setAdoption_status("null");
-        pinky.setPetType(petTypeList.get(2));
+        simba.setPetType(petTypeList.get(2));
         adoptablePetsRepository.save(simba);
     }
 }

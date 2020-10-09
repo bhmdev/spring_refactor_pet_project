@@ -1,5 +1,6 @@
 package com.launchacademy.adoptapet.repositories;
 
+import com.launchacademy.adoptapet.models.AdoptablePet;
 import com.launchacademy.adoptapet.models.PetType;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

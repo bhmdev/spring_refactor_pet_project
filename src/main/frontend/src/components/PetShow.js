@@ -2,19 +2,20 @@ import React, { useState, useEffect } from 'react'
 import PetAdoptionsForm from './PetAdoptionsForm'
 
 const PetShow = (props) => {
-  let petId = props.match.params.id
+  console.log(props)
   const [displayForm, setDisplayForm] = useState(false)
   const [pet, setPet] = useState([])
   const [applicationStatus, setApplicationStatus] = useState("")
 
-  let vaccinated = pet.vaccination_status === true? "Yes" : "No"
+  let vaccinated = pet.vaccinationStatus === true? "Yes" : "No"
   
   useEffect(() => {
-   fetch(`/api/v1/pets/pet_type/${petId}`)
+   fetch(`/api/v1${props.location.pathname}`)
     .then(result => result.json())
     .then(pet => {
-      setPet(pet[0])
+      setPet(pet)
     })
+    .catch(error => console.log(error))
   }, []);
   
   const handleAdoptClick = () => {
@@ -40,6 +41,7 @@ const PetShow = (props) => {
       <p>Age: {pet.age}</p>
       <p>Vaccinated: {vaccinated}</p>
       <p>{pet.adoption_story}</p>
+      <img src = {pet.img_url}></img>
       {adoptForm}
     </div>
   );

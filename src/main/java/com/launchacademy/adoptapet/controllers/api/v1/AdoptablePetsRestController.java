@@ -29,7 +29,6 @@ public class AdoptablePetsRestController {
 
     @GetMapping("/pets/{petType}/{id}")
     public AdoptablePet getPetsById(@PathVariable Integer id, @PathVariable String petType) {
-        System.out.println("is it getting in here");
         return petsRepository.findById(id).get();
     }
 }

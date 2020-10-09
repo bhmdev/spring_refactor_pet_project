@@ -14,7 +14,7 @@ import java.util.Optional;
 @RequestMapping("/api/v1")
 public class SurrenderApplicationsRestController {
 
-    private SurrenderApplicationsRepository surrenderApplicationRepository;
+    private SurrenderApplicationsRepository surrenderApplicationsRepository;
     private PetTypesRepository petTypesRepository;
 
     @Autowired

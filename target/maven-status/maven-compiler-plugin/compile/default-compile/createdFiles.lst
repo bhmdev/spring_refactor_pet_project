@@ -1,5 +1,6 @@
 com/launchacademy/adoptapet/seeders/AdoptablePetsSeeder.class
 com/launchacademy/adoptapet/repositories/PetTypesRepository.class
+com/launchacademy/adoptapet/controllers/api/v1/AdoptablePetsRestController$PetNotFoundAdvice.class
 com/launchacademy/adoptapet/models/exceeds/AdoptionApplication.class
 com/launchacademy/adoptapet/repositories/AdoptablePetsRepository.class
 com/launchacademy/adoptapet/models/PetType.class
@@ -7,6 +8,7 @@ com/launchacademy/adoptapet/controllers/api/v1/SurrenderApplicationsRestControll
 com/launchacademy/adoptapet/repositories/exceeds/AdoptionApplicationsRepository.class
 com/launchacademy/adoptapet/models/SurrenderApplication.class
 com/launchacademy/adoptapet/Spring.class
+com/launchacademy/adoptapet/controllers/api/v1/AdoptablePetsRestController$PetNotFoundException.class
 com/launchacademy/adoptapet/models/AdoptablePet.class
 com/launchacademy/adoptapet/seeders/PetTypesSeeder.class
 com/launchacademy/adoptapet/controllers/api/v1/PetTypesRestController.class

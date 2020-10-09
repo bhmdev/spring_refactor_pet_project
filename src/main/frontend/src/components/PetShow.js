@@ -44,22 +44,21 @@ const PetShow = (props) => {
 
   let vaccinated;
   let petShowPage;
-  if(pet) {
+  if(pet && pet.name) {
+     if(pet.vaccination_status===true) {
+        vaccinated = "Yes"
+      } else {
+        vaccinated = "No"
+      }
     petShowPage = (<div>
                     <h1>Adopt Me!!</h1>
+                    <img src = {pet.img_url}></img>
                     <h3>Name: {pet.name}</h3>
                     <p>Age: {pet.age}</p>
                     <p>Vaccinated: {vaccinated}</p>
                     <p>{pet.adoption_story}</p>
-                    <img src = {pet.img_url}></img>
                     {adoptForm}
                   </div>)
-
-    if(pet.vaccination_status===true) {
-      vaccinated = "Yes"
-    } else {
-      vaccinated = "No"
-    }
   }
 
 

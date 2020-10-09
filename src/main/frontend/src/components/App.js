@@ -4,11 +4,16 @@ import NavBar from "./NavBar"
 
 const App = props => {
   return (
-  	<BrowserRouter>
+    <BrowserRouter>
       <Route path="/pets" component={NavBar} />
-      <Redirect exact from="/" to="/pets" /> 
+      <Route path="/adoptions" component={NavBar} />
+      <Route path="/admin/review" component={NavBar} />
+      <Route exact path="/" component={NavBar}>
+        <Redirect to="/pets" />
+      </Route>
     </BrowserRouter>
   )
 }
+
 
 export default App
